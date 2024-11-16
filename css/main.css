@@ -91,10 +91,10 @@ body {
     color: red;
     cursor: pointer;
 }
-#unselected-pizza{
+.unselected-pizza{
     border: 3px solid green;
 }
-#selected-pizza{
+.selected-pizza{
     border: 5px solid red;
 }
 .menu-item p{
