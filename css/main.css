@@ -6,6 +6,10 @@
     font-family: 'montserrat';
     src: url('/fonts/Montserrat/static/Montserrat-Regular.ttf');
 }
+@font-face {
+    font-family: 'amanda-black';
+    src: url('/fonts/Amanda-black/amanda-black.regular.ttf');
+}
 body {
     margin: 0;
     padding: 0;
@@ -53,29 +57,37 @@ body {
     text-align: center;
     color: #130308;
 }
-.menu-container{
+.order-wrapper{
     width: 100%;
     height: 200vh;
     background: #7D1935;
     display: flex;
     justify-content: center;
 }
-.menu-item-container {
+.menu-container, .extras-container{
     width: 80%;
-    height: 150vh;
+    height: 155vh;
     background: #FAF0E6;
     border-radius: 10px;
+    margin-top: 10vh;
+}
+.menu-container h1, .extras-container h1{
+    padding: 0;
+    text-align: center;
+    font-family: 'amanda-black';
+}
+.menu-item-container, .extras-item-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-evenly; /* Space items vertically */
+    align-content: space-evenly;
     padding: 20px;
 }
 
-.menu-item {
-    width: 30%; /* Adjust to fit two items per row */
+.menu-item, .extras-item{
+    width: 30%;
     height: 50vh;
-
+    margin-top: 5vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -97,7 +109,7 @@ body {
 .selected-pizza{
     border: 5px solid red;
 }
-.menu-item p{
+.menu-item p, .extras-item p{
     font-family: 'montserrat';
     color: #130308;
 }
@@ -105,5 +117,26 @@ body {
     width: 40%;
     height: auto;
     border-radius: 50%;
+}
+.menu-container button, .extras-container button{
+    margin: 0;
+    margin-left: 34vw;
+    width: 15%;
+    height: 7vh;
+    background-color: #E63E6D;
+    font-family: 'montserrat';
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
 
+}
+button:hover{
+    cursor: pointer;
+    background-color: #f2255f;
+}
+button:active{
+    background-color: #be385e;
+}
+.extras-container{
+    display: none;
 }
