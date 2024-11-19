@@ -10,7 +10,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="main-header-container">
+        <div class="main-header-container" id="header">
             <a href="#main-header-container">
                 <div class="header-container">
                     <img src="/img/cherryLog.png" alt="Cherrywood Pizzeria Logo">
@@ -20,17 +20,15 @@
         </div>
         <div class="order-wrapper">
             <div class="menu-container">
-                <h1>Menu</h1>
+                <h1 id="menu-container-header">Menu</h1>
                 <div class="menu-item-container"></div>
-                <button class="continue">continue</button>
-            </div>
-            <div class="extras-container">
-                <h1>Extras</h1>
-                <div class="extras-item-container"></div>
-                <button class="continue">continue</button>
+                <div class="extras-item-container" id="extras-item-container"></div>
+                <div class="button-container">
+                    <a href="#header"><button class="back">back</button></a>
+                    <a href="#header"><button class="continue">continue</button></a>
+                </div>
             </div>
         </div>
-
         <div class="footer-container">
         </div>
     </div>
