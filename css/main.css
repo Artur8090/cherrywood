@@ -211,3 +211,8 @@ button:active {
     font-size: 20px;
     font-family: 'montserrat';
 }
+.size-item{
+    border: 1px solid #232122;
+    border-radius: 10px;
+    font-family: 'montserrat';
+}

@@ -15,14 +15,23 @@ function changeSlide(num) {
     if(num == 1){
         menuItemContainer.style.display = 'flex';
         extrasItemContainer.style.display = 'none';
+        drinkItemContainer.style.display = 'none'
         mainHeader.innerText = 'Menu'
         backButton.style.display ='none';
 
     } else if(num == 2){
 
         menuItemContainer.style.display = 'none';
+        drinkItemContainer.style.display = 'none'
         extrasItemContainer.style.display = 'flex';
         mainHeader.innerText = 'Extras'
+        backButton.style.display = 'block'
+    }else if(num == 3){
+
+        menuItemContainer.style.display = 'none';
+        drinkItemContainer.style.display = 'flex'
+        extrasItemContainer.style.display = 'none';
+        mainHeader.innerText = 'Drinks'
         backButton.style.display = 'block'
     }
 }

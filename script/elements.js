@@ -31,16 +31,32 @@ function ingredientToStr(ingArr){
 
 
 const extrasItemContainer = document.querySelector('.extras-item-container')
-const extrasName = ['Parmesan','Mozarella','Mushrooms','Olives','Pepperonies','Bacon','Bellpeppers','Tomatos'];
-const extrasPrice = [20000,20,20,20,20,20,20,20];
+const extrasName = ['Parmesan','Mozarella','Mushrooms','Olives','Pepperonies','Bacon','Bellpeppers','Tomatos','1','2','3','4'];
+const extrasPrice = [20000,20,20,20,20,20,20,20,20,20,20,20];
 function createExtrasElement(extrasElementArray, extrasPriceArray){
     for(let i = 0; i < extrasElementArray.length; i++){
         extrasItemContainer.innerHTML += `
-        <div class="extras-item unselected-extras"  id='${extrasName[i].toLowerCase()}'>
+        <div class="extras-item unselected-extras"  id='${extrasElementArray[i].toLowerCase()}'>
                 <p class="extras-name">Extra ${extrasElementArray[i]}</p>
-                    <img src="${'/img/extras' + (i + 1) + '.png'}" alt="${extrasName[i]}" class="extras-img">
+                    <img src="${'/img/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
                 <p class="extras-price">${extrasPriceArray[i]}:-</p>
         </div>`
     }
 }
 createExtrasElement(extrasName,extrasPrice)
+const drinkItemContainer = document.querySelector('.drinks-item-container')
+const drinkName = [];
+const drinkPrice = [];
+
+
+function createDrinksElement(drinkElementArray, drinkPriceArray){
+    for(let i = 0; i < drinkElementArray.length; i++){
+        drinkItemContainer.innerHTML +=`
+         <div class="extras-item unselected-extras"  id='${extrasName[i].toLowerCase()}'>
+                <p class="extras-name">Extra ${extrasElementArray[i]}</p>
+                    <img src="${'/img/extras' + (i + 1) + '.png'}" alt="${extrasName[i]}" class="extras-img">
+                <p class="extras-price">${extrasPriceArray[i]}:-</p>
+        </div>
+        `
+    }
+}
