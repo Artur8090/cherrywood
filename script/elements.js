@@ -10,7 +10,7 @@ function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
                 <div class="menu-item unselected-pizza"  id='${pizzaName[i].toLowerCase()}'>
                         <p class="pizza-name">${pizzaElementArray[i]}</p>
                         <p class="pizza-ingredient">${ingredientToStr(pizzaIngredients[i])}</p>
-                            <img src="${'/img/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
+                            <img src="${'/img/pizzaImg/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
                         <p class="pizza-price">${pizzaPriceArray[i]}NOK:-</p>
                 </div>`
     }
@@ -45,18 +45,31 @@ function createExtrasElement(extrasElementArray, extrasPriceArray){
 }
 createExtrasElement(extrasName,extrasPrice)
 const drinkItemContainer = document.querySelector('.drinks-item-container')
-const drinkName = [];
-const drinkPrice = [];
+const drinkName = ['Coca Cola','Pepsi','Sprite','Fanta','DrPepper','Mountain-dew','Apple-juice','Orange-juice',];
+const drinkPrice = [20,20,20,20,20,20,20,20];
 
 
-function createDrinksElement(drinkElementArray, drinkPriceArray){
-    for(let i = 0; i < drinkElementArray.length; i++){
-        drinkItemContainer.innerHTML +=`
-         <div class="extras-item unselected-extras"  id='${extrasName[i].toLowerCase()}'>
-                <p class="extras-name">Extra ${extrasElementArray[i]}</p>
-                    <img src="${'/img/extras' + (i + 1) + '.png'}" alt="${extrasName[i]}" class="extras-img">
-                <p class="extras-price">${extrasPriceArray[i]}:-</p>
-        </div>
-        `
+function createDrinksElement(drinkElementArray, drinkPriceArray) {
+    for (let i = 0; i < drinkElementArray.length; i++) {
+        let dividedDrinkName = drinkElementArray[i].split('-').join(' ');
+        drinkItemContainer.innerHTML += `
+        <div class="drink-item unselected-drink" id='${drinkElementArray[i].toLowerCase()}'>
+            <p class="drink-name">${dividedDrinkName}</p>
+            <img src="${'/img/drinkImg/drink' + (i + 1) + '.png'}" alt="${drinkElementArray[i]}" class="drink-img">
+            <p class="drink-price">${drinkPriceArray[i]}:-</p>
+            <div class="drink-size">
+                <div class="size-item">
+                    <p class="size-name">S</p>
+                </div>
+                <div class="size-item">
+                    <p class="size-name">M</p>
+                </div>
+                <div class="size-item">
+                    <p class="size-name">L</p>
+                </div>
+            </div>
+        </div>`;
     }
 }
+
+createDrinksElement(drinkName, drinkPrice);
