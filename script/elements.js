@@ -2,8 +2,8 @@
 
 const menuItemContainer = document.querySelector('.menu-item-container')
 const pizzaName = ['Pepperoni', 'Margharita', 'The Gamble', 'Hawaii', 'Tomato Empire', 'Mushroom Kingdom'];
-const pizzaPrice = [100000,101020,102324,1043324,1043244,'∞']
-const pizzaIngredients = [['Pepperoni ','Mozarella ','Parmesan'],[4,5,6],[7,8,9],[10,11,12],[13,14,15],[16,17,18]]
+const pizzaPrice = [100000, 101020, 102324, 1043324, 1043244, '∞']
+const pizzaIngredients = [['Pepperoni ', 'Mozarella ', 'Parmesan'], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]]
 function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
     for (let i = 0; i < pizzaElementArray.length; i++) {
         menuItemContainer.innerHTML += `
@@ -15,15 +15,15 @@ function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
                 </div>`
     }
 }
-createPizzaElement(pizzaName,pizzaPrice)
+createPizzaElement(pizzaName, pizzaPrice)
 
-function ingredientToStr(ingArr){
+function ingredientToStr(ingArr) {
     let ingStr = ``;
-    for(let i = 0; i < ingArr.length; i++){
-        if(i+1!=ingArr.length){
+    for (let i = 0; i < ingArr.length; i++) {
+        if (i + 1 != ingArr.length) {
             ingStr += `${ingArr[i]},`
-        } else{
-            ingStr +=`${ingArr[i]}`
+        } else {
+            ingStr += `${ingArr[i]}`
         }
     }
     return ingStr;
@@ -31,10 +31,10 @@ function ingredientToStr(ingArr){
 
 
 const extrasItemContainer = document.querySelector('.extras-item-container')
-const extrasName = ['Parmesan','Mozarella','Mushrooms','Olives','Pepperonies','Bacon','Bellpeppers','Tomatos','1','2','3','4'];
-const extrasPrice = [20000,20,20,20,20,20,20,20,20,20,20,20];
-function createExtrasElement(extrasElementArray, extrasPriceArray){
-    for(let i = 0; i < extrasElementArray.length; i++){
+const extrasName = ['Parmesan', 'Mozarella', 'Mushrooms', 'Olives', 'Pepperonies', 'Bacon', 'Bellpeppers', 'Tomatos', '1', '2', '3', '4'];
+const extrasPrice = [20000, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20];
+function createExtrasElement(extrasElementArray, extrasPriceArray) {
+    for (let i = 0; i < extrasElementArray.length; i++) {
         extrasItemContainer.innerHTML += `
         <div class="extras-item unselected-extras"  id='${extrasElementArray[i].toLowerCase()}'>
                 <p class="extras-name">Extra ${extrasElementArray[i]}</p>
@@ -43,10 +43,10 @@ function createExtrasElement(extrasElementArray, extrasPriceArray){
         </div>`
     }
 }
-createExtrasElement(extrasName,extrasPrice)
+createExtrasElement(extrasName, extrasPrice)
 const drinkItemContainer = document.querySelector('.drinks-item-container')
-const drinkName = ['Coca Cola','Pepsi','Sprite','Fanta','DrPepper','Mountain-dew','Apple-juice','Orange-juice',];
-const drinkPrice = [20,20,20,20,20,20,20,20];
+const drinkName = ['Coca Cola', 'Pepsi', 'Sprite', 'Fanta', 'DrPepper', 'Mountain-dew', 'Apple-juice', 'Orange-juice',];
+const drinkPrice = [20, 20, 20, 20, 20, 20, 20, 20];
 
 
 function createDrinksElement(drinkElementArray, drinkPriceArray) {
@@ -58,15 +58,18 @@ function createDrinksElement(drinkElementArray, drinkPriceArray) {
             <img src="${'/img/drinkImg/drink' + (i + 1) + '.png'}" alt="${drinkElementArray[i]}" class="drink-img">
             <p class="drink-price">${drinkPriceArray[i]}:-</p>
             <div class="drink-size">
-                <div class="size-item">
-                    <p class="size-name">S</p>
-                </div>
-                <div class="size-item">
-                    <p class="size-name">M</p>
-                </div>
-                <div class="size-item">
-                    <p class="size-name">L</p>
-                </div>
+                <label class="size-item">
+                    <input type="radio" class="size-radio" name="${drinkElementArray[i]}options"/>
+                    <span class="size-name">S</span>
+                </label>
+                <label class="size-item">
+                    <input type="radio" class="size-radio" name="${drinkElementArray[i]}options"/>
+                    <span class="size-name">M</span>
+                </label>
+                <label class="size-item">
+                    <input type="radio" class="size-radio" name="${drinkElementArray[i]}options"/>
+                    <span class="size-name">L</span>
+                </label>
             </div>
         </div>`;
     }

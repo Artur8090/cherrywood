@@ -236,4 +236,24 @@ button:active {
     font-family: 'montserrat';
     width: 50px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.size-item .size-radio{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border-radius: 20px;
+    opacity: 0;
+}
+.size-name{
+    position: absolute;
+}
+.unselected-size-item{
+    border: 1px solid #130308;
+}
+
+.selected-size-item{
+    border: 2px solid #7D1935;
 }
