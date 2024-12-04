@@ -4,7 +4,6 @@ const menuContainer = document.querySelector('.menu-container')
 const extrasContainer = document.querySelector('.extras-container');
 const drinkItems = document.getElementsByClassName('drink-item')
 const drinkSize = document.getElementsByClassName('size-item')
-const saveButton = document.querySelector('.continue');
 let selectedItems = [];
 let menuItemsArray = Array.from(menuItems);
 let extraItemsArray = Array.from(extraItems);
@@ -53,17 +52,20 @@ drinkSizeArray.forEach((element) => {
     });
 });
 
-saveButton.addEventListener('click',()=>{
-    for(let i = 0; i < menuItemsArray.length; i++){
-        if(menuItemsArray[i].classList[1] == 'selected-pizza'){
-            selectedItems.push(menuItemsArray[i].id)
+let fullOrder = [];
+let allItems = [].concat(menuItemsArray).concat(extraItemsArray).concat(drinkItemsArray);
+const allPrices = [].concat(pizzaPrice).concat(extrasPrice).concat(drinkPrice);
+console.log(allItems)
+const finnishButton = document.querySelector('.continue')
+finnishButton.addEventListener('click', ()=>{
+    allItems.forEach((element) =>{
+        for(let i = 0; i < element.length; i++){
+            if (element.classList[1] === 'selected-pizza' || element.classList[1] === 'selected-extras' || element.classList[1] === 'selected-drink'){
+                fullOrder.push(hiya)
+            }
         }
-    }
-    for(let i = 0; i < extraItemsArray; i++){
-        if(extraItemsArray[i].classList[1] == 'selected-extras'){
-            selectedItems.push(extraItemsArray[i].id)
-        }
-    }
-    console.log(selectedItems)
+    })
+    console.log(fullOrder)
 })
+
 

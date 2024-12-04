@@ -2,14 +2,14 @@
 
 const menuItemContainer = document.querySelector('.menu-item-container')
 const pizzaName = ['Pepperoni', 'Margharita', 'The Gamble', 'Hawaii', 'Tomato Empire', 'Mushroom Kingdom'];
-const pizzaPrice = [100000, 101020, 102324, 1043324, 1043244, '∞']
-const pizzaIngredients = [['Pepperoni ', 'Mozarella ', 'Parmesan'], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]]
+const pizzaPrice = [120, 100, 9999, 120, 150, 160]
+const pizzaIngredients = [['Pepperoni ', 'Mozarella ', 'Parmesan'], ['Mozarella', 'Black Olives'], ['?'], ['Mozarella', 'Pineapple', 'Chicken'], ['Tomato', 'Mozarella', 'Beef'], ['Champignon', 'Mozarella', 'Bellpeppers']]
 function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
     for (let i = 0; i < pizzaElementArray.length; i++) {
         menuItemContainer.innerHTML += `
                 <div class="menu-item unselected-pizza"  id='${pizzaName[i].toLowerCase()}'>
                         <p class="pizza-name">${pizzaElementArray[i]}</p>
-                        <p class="pizza-ingredient">${ingredientToStr(pizzaIngredients[i])}</p>
+                        <p class="pizza-ingredient">Ingredients: ${ingredientToStr(pizzaIngredients[i])}</p>
                             <img src="${'/img/pizzaImg/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
                         <p class="pizza-price">${pizzaPriceArray[i]}NOK:-</p>
                 </div>`
@@ -38,7 +38,7 @@ function createExtrasElement(extrasElementArray, extrasPriceArray) {
         extrasItemContainer.innerHTML += `
         <div class="extras-item unselected-extras"  id='${extrasElementArray[i].toLowerCase()}'>
                 <p class="extras-name">Extra ${extrasElementArray[i]}</p>
-                    <img src="${'/img/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
+                    <img src="${'/img/extraImg/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
                 <p class="extras-price">${extrasPriceArray[i]}:-</p>
         </div>`
     }
@@ -74,5 +74,5 @@ function createDrinksElement(drinkElementArray, drinkPriceArray) {
         </div>`;
     }
 }
-
 createDrinksElement(drinkName, drinkPrice);
+const paymentItemContainer = document.querySelector('.payment-item-container');

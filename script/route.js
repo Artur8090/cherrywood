@@ -17,7 +17,9 @@ function changeSlide(num) {
         extrasItemContainer.style.display = 'none';
         drinkItemContainer.style.display = 'none'
         mainHeader.innerText = 'Menu'
+        continueButton.style.display = 'block'
         backButton.style.display ='none';
+        paymentItemContainer.style.display = 'none'
 
     } else if(num == 2){
 
@@ -25,13 +27,24 @@ function changeSlide(num) {
         drinkItemContainer.style.display = 'none'
         extrasItemContainer.style.display = 'flex';
         mainHeader.innerText = 'Extras'
-        backButton.style.display = 'block'
+        continueButton.style.display = 'block'
+        backButton.style.display = 'block'   
+        paymentItemContainer.style.display = 'none'
     }else if(num == 3){
 
         menuItemContainer.style.display = 'none';
         drinkItemContainer.style.display = 'flex'
         extrasItemContainer.style.display = 'none';
         mainHeader.innerText = 'Drinks'
+        continueButton.style.display = 'block'
         backButton.style.display = 'block'
+        paymentItemContainer.style.display = 'none'
+    } else if(num == 4){
+        menuItemContainer.style.display = 'none';
+        drinkItemContainer.style.display = 'none'
+        extrasItemContainer.style.display = 'none';
+        mainHeader.innerText = 'Payment'
+        continueButton.style.display = 'none'
+        paymentItemContainer.style.display = 'flex'
     }
 }
