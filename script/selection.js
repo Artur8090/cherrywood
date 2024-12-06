@@ -57,15 +57,18 @@ let allItems = [].concat(menuItemsArray).concat(extraItemsArray).concat(drinkIte
 const allPrices = [].concat(pizzaPrice).concat(extrasPrice).concat(drinkPrice);
 console.log(allItems)
 const finnishButton = document.querySelector('.continue')
-finnishButton.addEventListener('click', ()=>{
-    allItems.forEach((element) =>{
-        for(let i = 0; i < element.length; i++){
-            if (element.classList[1] === 'selected-pizza' || element.classList[1] === 'selected-extras' || element.classList[1] === 'selected-drink'){
-                fullOrder.push(hiya)
-            }
+finnishButton.addEventListener('click', () => {
+    fullOrder = [];
+    allItems.forEach((element) => {
+        if (
+            element.classList.contains('selected-pizza') || 
+            element.classList.contains('selected-extras') || 
+            element.classList.contains('selected-drink')
+        ) {
+            const itemName = element.querySelector('p').textContent;
+            const itemPrice = element.querySelector('.pizza-price, .extras-price, .drink-price')?.textContent || '';
+            fullOrder.push({ name: itemName, price: itemPrice });
         }
-    })
-    console.log(fullOrder)
-})
-
-
+    });
+    createPaymentElement();
+});

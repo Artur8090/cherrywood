@@ -11,7 +11,7 @@ function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
                         <p class="pizza-name">${pizzaElementArray[i]}</p>
                         <p class="pizza-ingredient">Ingredients: ${ingredientToStr(pizzaIngredients[i])}</p>
                             <img src="${'/img/pizzaImg/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
-                        <p class="pizza-price">${pizzaPriceArray[i]}NOK:-</p>
+                        <p class="pizza-price">${pizzaPriceArray[i]}</p>
                 </div>`
     }
 }
@@ -39,7 +39,7 @@ function createExtrasElement(extrasElementArray, extrasPriceArray) {
         <div class="extras-item unselected-extras"  id='${extrasElementArray[i].toLowerCase()}'>
                 <p class="extras-name">Extra ${extrasElementArray[i]}</p>
                     <img src="${'/img/extraImg/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
-                <p class="extras-price">${extrasPriceArray[i]}:-</p>
+                <p class="extras-price">${extrasPriceArray[i]}</p>
         </div>`
     }
 }
@@ -56,7 +56,7 @@ function createDrinksElement(drinkElementArray, drinkPriceArray) {
         <div class="drink-item unselected-drink" id='${drinkElementArray[i].toLowerCase()}'>
             <p class="drink-name">${dividedDrinkName}</p>
             <img src="${'/img/drinkImg/drink' + (i + 1) + '.png'}" alt="${drinkElementArray[i]}" class="drink-img">
-            <p class="drink-price">${drinkPriceArray[i]}:-</p>
+            <p class="drink-price">${drinkPriceArray[i]}</p>
             <div class="drink-size">
                 <label class="size-item">
                     <input type="radio" class="size-radio" name="${drinkElementArray[i]}options"/>
@@ -76,3 +76,28 @@ function createDrinksElement(drinkElementArray, drinkPriceArray) {
 }
 createDrinksElement(drinkName, drinkPrice);
 const paymentItemContainer = document.querySelector('.payment-item-container');
+function createPaymentElement(){
+    paymentItemContainer.innerHTML = '';
+    for(let i = 0; i < fullOrder.length; i++){
+        paymentItemContainer.innerHTML+= `
+        <div class='payment-item'> 
+            <p class='order-item-name'>${fullOrder[i].name}</p>
+            <p class='order-item-price'>${fullOrder[i].price}</p>
+        </div>
+        `
+    }
+    paymentItemContainer.innerHTML += `
+    <div class='total-price-container'>
+        <p class='total-text'>Total:</p>
+        <p class='total-price'>${priceSum(fullOrder)}</p>
+    </div>
+    `
+}
+function priceSum(arr){
+    let fullPrice = 0;
+    for(let i = 0; i < arr.length; i++){
+        fullPrice += parseInt(arr[i].price);
+    }
+    return fullPrice;
+}
+

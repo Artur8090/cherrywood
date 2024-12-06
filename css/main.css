@@ -23,12 +23,20 @@ body {
     position: fixed;
     bottom: 10px;
     left: 10px;
+    background-color: #FAF0E6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 #anchor img{
-    width: 50px;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 
+}
+.pillar-image{
+    height: 190px;
+    rotate: 180deg;
 }
 .main-header-container {
     width: 100%;
@@ -152,6 +160,8 @@ body {
     font-size: 15px;
     border-radius: 5px;
     border: none;
+    transition: 0.3s width;
+    
 
 }
 .menu-container .button-container{
@@ -172,6 +182,7 @@ body {
 button:hover {
     cursor: pointer;
     background-color: #f2255f;
+    width: 250px;
 }
 
 button:active {
@@ -192,7 +203,7 @@ button:active {
     font-family: 'montserrat';
     color: #232122;
 }
-.pizza-price{
+.pizza-price, .drink-price{
     color: #130308;
     font-family: 'montserrat';
 }
@@ -229,6 +240,7 @@ button:active {
 .drink-size{
     display: flex;
     justify-content: space-evenly;
+    color: #130308;
     
 }
 .size-item{
@@ -257,4 +269,40 @@ button:active {
 
 .selected-size-item{
     border: 2px solid #7D1935;
+}
+.payment-item-wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+.payment-item-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #7D1935;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'montserrat';
+    
+}
+.payment-item, .total-price-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.payment-item .order-item-name, .total-price-container .total-text{
+    width: 20%;
+    text-align: left;
+}
+.payment-item .order-item-price, .total-price-container .total-price{
+    width: 20%;
+    text-align: right;
+}
+.total-price-container{
+    border: 0;
+    border-top: 3px solid gray;
+    border-style: dashed;
+    font-weight: bold;
+    color: #232122;
 }
