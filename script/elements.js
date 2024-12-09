@@ -10,7 +10,7 @@ function createPizzaElement(pizzaElementArray, pizzaPriceArray) {
                 <div class="menu-item unselected-pizza"  id='${pizzaName[i].toLowerCase()}'>
                         <p class="pizza-name">${pizzaElementArray[i]}</p>
                         <p class="pizza-ingredient">Ingredients: ${ingredientToStr(pizzaIngredients[i])}</p>
-                            <img src="${'/img/pizzaImg/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
+                            <img src="${'img/pizzaImg/Pizza' + (i + 1) + '.png'}" alt="${pizzaName[i]}" class="pizza-img">
                         <p class="pizza-price">${pizzaPriceArray[i]}</p>
                 </div>`
     }
@@ -38,7 +38,7 @@ function createExtrasElement(extrasElementArray, extrasPriceArray) {
         extrasItemContainer.innerHTML += `
         <div class="extras-item unselected-extras"  id='${extrasElementArray[i].toLowerCase()}'>
                 <p class="extras-name">Extra ${extrasElementArray[i]}</p>
-                    <img src="${'/img/extraImg/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
+                    <img src="${'img/extraImg/extras' + (i + 1) + '.png'}" alt="${extrasElementArray[i]}" class="extras-img">
                 <p class="extras-price">${extrasPriceArray[i]}</p>
         </div>`
     }
@@ -55,7 +55,7 @@ function createDrinksElement(drinkElementArray, drinkPriceArray) {
         drinkItemContainer.innerHTML += `
         <div class="drink-item unselected-drink" id='${drinkElementArray[i].toLowerCase()}'>
             <p class="drink-name">${dividedDrinkName}</p>
-            <img src="${'/img/drinkImg/drink' + (i + 1) + '.png'}" alt="${drinkElementArray[i]}" class="drink-img">
+            <img src="${'img/drinkImg/drink' + (i + 1) + '.png'}" alt="${drinkElementArray[i]}" class="drink-img">
             <p class="drink-price">${drinkPriceArray[i]}</p>
             <div class="drink-size">
                 <label class="size-item">
