@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'cursive';
-    src: url('/fonts/Cursive/static/cursive-Regular.ttf');
+    src: url('fonts/Cursive/static/cursive-Regular.ttf');
 }
 @font-face {
     font-family: 'montserrat';
-    src: url('/fonts/Montserrat/static/Montserrat-Regular.ttf');
+    src: url('fonts/Montserrat/static/Montserrat-Regular.ttf');
 }
 @font-face {
     font-family: 'amanda-black';
-    src: url('/fonts/Amanda-black/amanda-black.regular.ttf');
+    src: url('fonts/Amanda-black/amanda-black.regular.ttf');
 }
 @font-face {
     font-family: 'afacad';
-    src: url('/fonts/Afacad_Flux/static/AfacadFlux-Regular.ttf');
+    src: url('fonts/Afacad_Flux/static/AfacadFlux-Regular.ttf');
 }
 
 body {
