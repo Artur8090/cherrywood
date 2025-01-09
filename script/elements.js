@@ -45,7 +45,7 @@ function createExtrasElement(extrasElementArray, extrasPriceArray) {
 }
 createExtrasElement(extrasName, extrasPrice)
 const drinkItemContainer = document.querySelector('.drinks-item-container')
-const drinkName = ['Coca Cola', 'Pepsi', 'Sprite', 'Fanta', 'DrPepper', 'Mountain-dew', 'Apple-juice', 'Orange-juice',];
+const drinkName = ['Coca Cola', 'Pepsi', 'Sprite', 'Fanta', 'DrPepper', 'Mountain-dew', 'Orange-juice',  'Apple-juice'];
 const drinkPrice = [20, 20, 20, 20, 20, 20, 20, 20];
 
 

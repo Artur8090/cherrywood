@@ -140,19 +140,13 @@ body {
 .selected-pizza, .selected-extras, .selected-drink{
     border: 5px solid red;
 }
-
-
-
 .menu-item img, .extras-item img, .drink-item img{
     width: 40%;
     height: auto;
     border-radius: 50%;
-
 }
-
 .menu-container button{
     margin: 0;
-
     width: 15vw;
     height: 7vh;
     background-color: #E63E6D;
@@ -161,8 +155,6 @@ body {
     border-radius: 5px;
     border: none;
     transition: 0.3s width;
-    
-
 }
 .menu-container .button-container{
     display: flex;
@@ -172,29 +164,28 @@ body {
 .menu-container .button-container a{
     text-decoration: none;
 }
-
 .menu-container button a{
     width: 100%;
-    height: 100%;
-    
+    height: 100%;   
 }
-
 button:hover {
     cursor: pointer;
     background-color: #f2255f;
     width: 250px;
 }
-
 button:active {
     background-color: #be385e;
-
 }
-
 .extras-item-container{
     display: none;
 }
-.pizza-name, .extras-name, .drink-name{
+.pizza-name, .drink-name{
     font-size: 30px;
+    font-family: 'afacad';
+    color: #130308;
+}
+.extras-name{
+    font-size: 25px;
     font-family: 'afacad';
     color: #130308;
 }
@@ -219,7 +210,6 @@ button:active {
     padding: 10px;
     transition: 0.3s translate;
 }
-
 .extras-price{
     color: #130308;
     font-size: 20px;
